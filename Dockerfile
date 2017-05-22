@@ -5,6 +5,9 @@ MAINTAINER Ardeshir Eshghi
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
+# Install build tools
+RUN apk add --no-cache make gcc g++
+
 # Install aws dependencies
 RUN apk --no-cache update && \
     apk --no-cache add python py-pip py-setuptools ca-certificates curl groff less && \
